@@ -19,7 +19,9 @@ after the equation.
 
 In a math environment, `name` will be interpreted as `n a m e`, i.e., 4
 variables "multiplied" with each other. If you want this to render as a single
-word, use `\mathit{name}`.
+word, use `\mathit{name}`. You can also use `\operatorname{name}` or
+`\DeclareMathOperator` (and wrap them in a command to make this more convenient
+to write and read).
 
 When writing a paper (not sure exactly which style sets this up), there's an
 `\author` macro where names are separated by `\and`. If you want an explicit
@@ -41,3 +43,6 @@ The following macro will take arguments with LaTeX special characters, and
 renders them in a monospace font:
 `\newcommand{\cc}[1]{\mbox{\smaller[0.5]\texttt{\detokenize{#1}}}}`. Useful for
 small code snippets or referencing identifiers.
+
+You can customize the hyphenation options LaTeX considers for a word with
+`\hyphenation`.

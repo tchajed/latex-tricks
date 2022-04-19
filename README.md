@@ -20,3 +20,14 @@ after the equation.
 In a math environment, `name` will be interpreted as `n a m e`, i.e., 4
 variables "multiplied" with each other. If you want this to render as a single
 word, use `\mathit{name}`.
+
+When writing a paper (not sure exactly which style sets this up), there's an
+`\author` macro where names are separated by `\and`. If you want an explicit
+line break in that list, use the following macro:
+
+```tex
+\def\andnewline{\end{tabular} \\ \begin{tabular}[t]{c}}
+```
+
+(this works because each author is actually its own `\tabular` environment;
+`\and` just ends the previous environment and starts a new one)

@@ -46,3 +46,10 @@ small code snippets or referencing identifiers.
 
 You can customize the hyphenation options LaTeX considers for a word with
 `\hyphenation`.
+
+BibTeX has its own ideas of how to capitalize titles, depending on the style in
+use. This goes horribly wrong for abbreviations and proper names in titles. The
+way to fix it is to use `{JavaScript}` in your bibtex file, which will preserve
+its case. If you've ever seen something like "javascript" or an all-caps
+abbreviation like "nfs" or "usa" in a bibliography, it's because they made this
+mistake.

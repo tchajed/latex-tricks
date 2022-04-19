@@ -36,3 +36,8 @@ When a macro expands to a word, LaTeX swallows the space afterward (eg, `\sys`
 expands to "Linux" and `\sys is cool` renders as "Linuxis cool"). You can fix
 this by writing `\sys{}`, or with `\usepackage{xspace}` and then
 `\newcommand{\sys}{Linux\xspace}`.
+
+The following macro will take arguments with LaTeX special characters, and
+renders them in a monospace font:
+`\newcommand{\cc}[1]{\mbox{\smaller[0.5]\texttt{\detokenize{#1}}}}`. Useful for
+small code snippets or referencing identifiers.

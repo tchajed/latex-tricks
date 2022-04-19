@@ -8,9 +8,15 @@ an extra pair of curly braces.
 If you have a binary operator at the end of a line (say in a big equation in an
 `aligned` environment), you need to write something like `x + {} \\` so
 that LaTeX inserts binary operator spacing between the `x` and the `+`.
+The same goes for operators next to `&` alignment specifiers, e.g.
+`x ={}& 5`.
 
 (iris.sty-specific) References to `\inferH` will be broken if the `\inferH` is
 in a `\[ \]`. Switch to `\begin{mathpar}` to fix this.
 
 In an `align*` environment, a final newline will actually add extra whitespace
 after the equation.
+
+In a math environment, `name` will be interpreted as `n a m e`, i.e., 4
+variables "multiplied" with each other. If you want this to render as a single
+word, use `\mathit{name}`.

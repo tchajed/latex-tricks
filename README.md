@@ -22,6 +22,8 @@ variables "multiplied" with each other. If you want this to render as a single
 word, use `\mathit{name}`. You can also use `\operatorname{name}` or
 `\DeclareMathOperator` (and wrap them in a command to make this more convenient
 to write and read).
+(See [here](https://tex.stackexchange.com/questions/691628/eulervm-spacing-in-math-mode)
+for what to do if you changed your match font.)
 
 When writing a paper (not sure exactly which style sets this up), there's an
 `\author` macro where names are separated by `\and`. If you want an explicit
